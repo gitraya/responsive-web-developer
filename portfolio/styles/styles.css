@@ -1,0 +1,381 @@
+:root {
+    --main-font: 'Montserrat', sans-serif;
+    --indicator-font: 'Roboto', sans-serif;
+    --box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.12);
+    --gray-one: #333;
+    --gray-two: #4f4f4f;
+    --gray-three: #828282;
+    --gray-four: #bdbdbd;
+    --gray-five: #E0E0E0;
+    --gray-six: #f2f2f2;
+    --bc-bar: #C4C4C4;
+    --blue: #2F80ED;
+    --white: #fff;
+}
+
+* {box-sizing: border-box;}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-font);
+    background-color: var(--gray-six);
+}
+
+.bold-color {color: var(--gray-one);}
+.semi-bold-color, .tags span {color: var(--gray-two);}
+.light-color {color: var(--gray-three);}
+.lighter-color {color: var(--gray-five);}
+.blue-color {color: var(--blue);}
+.font-18 {font-size: 18px;}
+.bd-radius-4 {border-radius: 4px;}
+.bd-radius-12 {border-radius: 12px;}
+.mg-12 {margin: 12px 0;}
+.mg-8 {margin: 8px 0;}
+.mg-0 {margin: 0;}
+.mb-12 {margin: 0 0 12px;}
+.mt-16 {margin: 16px 0 0;}
+.mg-24 {margin: 24px 0;}
+.wg-500 {font-weight: 500;}
+.wg-600 {font-weight: 600;}
+a {text-decoration: none;}
+a:link {color: var(--gray-two);}
+a:visited {color: inherit;}
+a:hover {color: inherit;}
+a:active {color: inherit;}
+.bc-img {background-size: cover; background-position: center;}
+
+.center-i {
+    vertical-align: middle;
+    margin: 0 0.5rem;
+}
+
+.bx-shadow {box-shadow: var(--box-shadow);}
+
+main {
+    max-width: 100%;
+    height: auto;
+    margin: 5% 10%;
+    display: grid;
+    grid-template-columns: 0.7fr 1fr;
+    grid-auto-rows: minmax(20rem, min-content);
+    grid-template-areas: 
+        "personal personal"
+        "skills blogs"
+        "hobies blogs"
+        "hobies experiences"
+        "projects projects"
+    ;
+    gap: 2rem 1.6rem;
+}
+
+@media screen and (max-width: 2560px) and (min-width: 2000px) {
+    main {
+        margin: 5% 20%;
+    }
+}
+
+@media screen and (max-width: 1220px) and (min-width: 1024px) {
+    main {
+        margin: 5%;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 960px) {
+    main {
+        margin: 5% 2%;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    main {
+        margin: 5%;
+    }
+}
+
+.cardbox {
+    padding: 1.5rem;
+    background-color: var(--white);
+}
+
+.personal.section {
+    max-width: 100%;
+    grid-area: personal;
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 0.6fr;
+    grid-template-areas: 
+        "one two three"
+        "one four four"
+    ;
+    column-gap: 1.5rem;
+}
+
+.gridbox.one {grid-area: one;}
+.gridbox.two {grid-area: two;}
+.gridbox.three {
+    grid-area: three;
+    display: flex;
+    flex-direction: column;
+}
+.gridbox.four {grid-area: four;}
+.gridbox.one.image {background-image: url('../assets/profile.jpg');}
+
+.flexbox.column {
+    display: flex;
+    flex-direction: column;
+}
+.flexbox.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.skills.section {grid-area: skills;}
+.blogs.section {grid-area: blogs;}
+.hobies.section {grid-area: hobies;}
+.experiences.section {grid-area: experiences;}
+.projects.section {grid-area: projects;}
+
+.skill-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skill-bar span {flex: 1 1 0;}
+
+.container-bar {
+    flex: 1.7 1.7 0;
+    height: 10px;
+    background-color: var(--bc-bar);
+}
+
+.skill {
+    height: inherit;
+    background-color: var(--blue);
+}
+.skill.reacts {width: 60%;}
+.skill.javascripts {width: 80%;}
+.skill.csss{width: 90%;}
+.skill.bootstraps {width: 75%;}
+.skill.tailwinds {width: 70%;}
+.skill.nodejss {width: 75%;}
+.flexbox.main p {margin-right: 6rem;}
+.flexbox.main span {margin-top: 4rem;}
+
+.blogs.section {padding-right: 0;}
+
+.flexbox.head {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-areas: 
+        "one two"
+        "one two"
+    ;
+}
+
+.flexbox.head .title {grid-area: one;}
+.flexbox.head .image {
+    grid-area: two;
+    max-width: 100%;
+    height: 20rem;
+    margin: 1rem 0 2rem 1rem;
+    background-image: url('../assets/blog1.jpg');
+    border-radius: 12px 0 0 12px;
+}
+
+.card {margin: 1rem 0;}
+.card:nth-of-type(1) .image {background-image: url('../assets/hobiesreading.jpg');}
+.card:nth-of-type(2) .image {background-image: url('../assets/hobiesbiking.jpg');}
+.card:nth-of-type(3) .image {background-image: url('../assets/hobiesgaming.jpg');}
+.card .image {
+    max-width: 100%;
+    height: 9rem;
+}
+
+.experiences.section .flexbox.row {margin: 1rem 0;}
+
+.img-logo {
+    max-width: 30%;
+    height: auto;
+    padding: 1.5rem;
+}
+
+.projects.flex {
+    margin: 2rem 0;
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.projectcard {
+    margin-right: 1.6rem;
+    max-width: 35%;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 900px) {
+    .personal.section {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1040px) and (min-width: 900px) {
+    .projects.flex {
+        flex-wrap: wrap;
+        margin: 1rem 0 2rem;
+    }
+
+    .projectcard {
+        max-width: 45%;
+        margin: 0.8rem 1.6rem 0.8rem 0;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .personal.section {
+        grid-template-columns: 0.6fr 1fr;
+        grid-template-areas: 
+            "one two"
+            "one three"
+            "four four"
+        ;
+    }
+
+    .gridbox.one.image {
+        height: 15rem;
+    }
+    
+    .projects.flex {
+        flex-wrap: wrap;
+        margin: 1rem 0 2rem;
+    }
+
+    .projectcard {
+        max-width: 100%;
+        margin: 0.8rem 0;
+    }
+}
+
+.projectcard:last-of-type {margin-right: 0;}
+
+.tag-link {
+    margin: 0.8rem 0.8rem 0.8rem 0;
+    padding: 0.5rem;
+    border: 1px solid var(--gray-two);
+    background-color: var(--white);
+}
+
+.select {
+    background-color: var(--blue);
+    border: none
+}
+
+.select small {color: var(--white);}
+
+.preview {
+    width: 100%;
+    height: 15rem;
+    background-position: top;
+}
+.projectcard:nth-of-type(1) .preview {background-image: url('../assets/overviewkedairaya.png');}
+.projectcard:nth-of-type(2) .preview {background-image: url('../assets/overviewediehomepage.png');}
+.projectcard:nth-of-type(3) .preview {background-image: url('../assets/overviewcheckout.png');}
+
+.tags {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.tags span {margin-right: 0.5rem;}
+.actbtn {
+    padding: 0.8rem 1.8rem;
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+    color: var(--white) !important;
+}
+.actbtn:nth-of-type(2) {
+    background-color: var(--white); 
+    border: 1px solid var(--blue); 
+    color: var(--blue) !important;
+}
+
+/* Footer copyright */
+footer {
+    display: flex;
+}
+.copyright {
+    max-width: 100%;
+    height: auto;
+    margin: 2rem auto;
+}
+
+.copyright a {
+    text-decoration: underline;
+}
+
+.copyright a:hover {
+    color: var(--gray-two);
+}
+
+/* Mobile device media screen */
+@media screen and (max-width: 860px) {
+    main {
+        /* grid-template-columns: 1fr;
+        grid-template-areas: 
+            "personal"
+            "skills"
+            "blogs"
+            "hobies"
+            "experiences"
+            "projects"
+        ; */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .personal.section {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .header.projects .flexbox.row {
+        flex-wrap: wrap;
+    }
+
+    .flexbox.row:first-of-type .img-logo {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .personal.section {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "one one"
+            "two three"
+            "four four"
+        ;
+    }
+
+    .gridbox.one.image {
+        height: 20rem;
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .personal.section {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "one"
+            "two"
+            "three"
+            "four"
+        ;
+    }
+}
+
+@media screen and (max-width: 335px) {
+    main {
+        margin: 5% 2%;
+    }
+}
