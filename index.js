@@ -1,5 +1,6 @@
 const express = require("express");
 const path = require("path");
+const routes = require("./routes");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -7,12 +8,9 @@ app.get("/", (req, res) => {
   res.send("<h1>Responsive Web Developer</h1>");
 });
 
-app.use(
-  "/404-not-found-page",
-  express.static(path.join(__dirname, "404-not-found-page"))
-);
-
-app.use("/my-team-page", express.static(path.join(__dirname, "my-team-page")));
+routes.forEach((route) => {
+  return app.use(`/${route}`, express.static(path.join(__dirname, route)));
+});
 
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
