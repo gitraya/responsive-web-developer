@@ -12,6 +12,8 @@ app.use(
   express.static(path.join(__dirname, "404-not-found-page"))
 );
 
+app.use("/my-team-page", express.static(path.join(__dirname, "my-team-page")));
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
