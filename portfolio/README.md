@@ -6,11 +6,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://gitraya.github.io/fake-portfolio/">
+    <a href="https://responsive-web-developer.herokuapp.com/portfolio">
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/gitraya/fake-portfolio">
+    <a href="https://github.com/gitraya/responsive-web-developer/tree/master/portfolio">
       Solution
     </a>
     <span> | </span>
@@ -29,7 +29,7 @@
 
 ## Overview
 
-![screenshot](https://github.com/gitraya/fake-portfolio/blob/main/assets/overviewfakeportfolio.png)
+![screenshot](https://github.com/gitraya/responsive-web-developer/blob/master/portfolio/assets/overviewfakeportfolio.png)
 
 ## Built With
 
