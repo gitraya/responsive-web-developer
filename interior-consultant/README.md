@@ -6,11 +6,11 @@
 
 <div align="center">
   <h3>
-    <a href="https://gitraya.github.io/interior-consultant/">
+    <a href="https://responsive-web-developer.herokuapp.com/interior-consultant">
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/gitraya/interior-consultant">
+    <a href="https://github.com/gitraya/responsive-web-developer/tree/master/interior-consultant">
       Solution
     </a>
     <span> | </span>
@@ -20,7 +20,6 @@
   </h3>
 </div>
 
-
 ## Table of Contents
 
 - [Overview](#overview)
@@ -28,11 +27,9 @@
 - [Features](#features)
 - [Contact](#contact)
 
-
 ## Overview
 
-![screenshot](https://github.com/gitraya/interior-consultant/blob/main/assets/overviewinteriorconsultant.png)
-
+![screenshot](https://github.com/gitraya/responsive-web-developer/blob/master/interior-consultant/assets/overviewinteriorconsultant.png)
 
 ## Built With
 
@@ -40,11 +37,9 @@
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
 - [JavaScript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
 
-
 ## Features
 
 This application/site was created as a submission to a [DevChallenges](https://devchallenges.io/challenges) challenge. The [challenge](https://devchallenges.io/challenges/Jymh2b2FyebRTUljkNcb) was to build an application to complete the given user stories.
-
 
 ## Contact
 
