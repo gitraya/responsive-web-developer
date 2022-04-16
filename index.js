@@ -5,7 +5,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
-  res.send("<h1>Responsive Web Developer</h1>");
+  res.sendFile(path.join(__dirname, "index.html"));
 });
 
 routes.forEach((route) => {
