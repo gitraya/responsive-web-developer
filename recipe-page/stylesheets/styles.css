@@ -1,0 +1,332 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --gray-one: #333333;
+    --gray-two: #4F4F4F;
+    --gray-three: #828282;
+    --gray-four: #BDBDBD;
+    --orange: #F2994A;
+    --head-font: 'Playfair Display', serif;
+    --main-font: 'Montserrat', sans-serif
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--main-font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.head-intro h1,
+.title-section,
+.ingredients-title,
+li.instruction::before {
+    font-family: var(--head-font);
+}
+
+.head-intro div p {
+    color: var(--gray-two);
+}
+
+.time-text p,
+.title-section,
+.ingredients-title,
+.ingredient label,
+.instruction {
+    color: var(--gray-one);
+}
+
+.time-title,
+.article-source, 
+.article-source a,
+.article-source a:active,
+.copyright a,
+.copyright:active {
+    color: var(--gray-four);
+    text-decoration: none;
+}
+
+/* Grid setting */
+.recipe-article {
+    width: 70%;
+    max-height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas: 
+        "header header"
+        "section-ingredients sidebar"
+        "section-instructions sidebar"   
+    ;
+    gap: 25px 50px;
+    justify-content: center;
+}
+
+@media (max-width: 1200px) {
+    .recipe-article {
+        width: 80%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .recipe-article {
+        width: 90%;
+    }
+}
+
+@media (max-width: 800px) {
+    .recipe-article {
+        width: 95%;
+        gap: 25px 35px;
+    }
+}
+
+/* Head article */
+.head-intro {
+    grid-area: header;
+}
+
+.head-intro h1 {
+    margin: 16px 0;
+    font-size: 48px;
+}
+
+.head-intro div {
+    display: flex;
+}
+
+.head-intro div p {
+    width: 68%;
+    margin: 10px;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.dots-icon {
+    align-self: flex-start;
+    height: 100%;
+    margin: 16px 6px 0 0;
+}
+
+.image-hero {
+    max-width: 100%;
+    height: auto;
+    margin-top: 32px;
+}
+
+.cost-time-section {
+    grid-area: sidebar;
+    margin-top: 60px;
+}
+
+.time-item {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.time-title {
+    margin: 4px 6px;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+.time-text p {
+    margin: 4px 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.material-icons {
+    color: var(--gray-two);
+    font-size: 36px;
+}
+
+.time-item:nth-child(1) .material-icons, .time-item:nth-child(1) .time-text p {
+    color: var(--orange);
+}
+
+.title-section {
+    font-size: 24px;
+}
+
+/* Ingredients section */
+.ingredients-section {
+    grid-area: section-ingredients;
+}
+
+.ingredients-title {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 400;
+    margin: 30px 0;
+}
+
+.ingredients-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.ingredient {
+    display: flex;
+    align-items: flex-start;
+    margin: 12px 4px;
+}
+
+.ingredient-check {
+    width: 21px;
+    height: 21px;
+    margin: 0;
+    border-color: var(--gray-three);
+}
+
+.ingredient-check:checked + label {
+    text-decoration: line-through;
+    color: var(--gray-four);
+}
+
+.ingredient label {
+    width: 90%;
+    margin-left:  20px;
+    font-size: 16px;
+}
+
+/* Instructions section */
+.instructions-section {
+    grid-area: section-instructions;
+}
+
+.instructions-list {
+    list-style: none;
+    counter-reset: count;
+}
+
+.instruction {
+    position: relative;
+    counter-increment: count;
+    margin: 18px 4px;
+    font-size: 16px;
+}
+
+li.instruction::before {
+    content: counter(count);
+    position: absolute;
+    --size: 36px;
+    left: calc(-1 * var(--size) - 10px);
+    width: var(--size);
+    height: var(--size);
+    top: 0;
+    background-color: var(--orange);
+    color: #FFF;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 5px;
+}
+
+.article-source {
+    margin: 40px 0;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.article-source a:hover {
+    color: var(--gray-two);
+}
+
+/* Footer copyright */
+.copyright {
+    text-align: center;
+    vertical-align: middle;
+    height: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    font-weight: 400;
+    color: var(--gray-four);
+    margin-bottom: 25px;
+}
+
+.copyright a {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .recipe-article {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "header"
+            "sidebar"
+            "section-ingredients"
+            "section-instructions"   
+        ;
+    }
+
+    .head-intro div p {
+        width: 95%;
+    }
+
+    .cost-time-section {
+        margin-top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas: 
+            "header header header"
+            "item-one item-two item-three" 
+        ;
+    }
+
+    .time-item {
+        margin: 15px 0;
+    }
+
+    .time-item:nth-child(1) {
+        grid-area: header;
+    }
+
+    .time-item:nth-child(2) {
+        grid-area: item-one;
+    }
+
+    .time-item:nth-child(3) {
+        grid-area: item-two;
+    }
+
+    .time-item:nth-child(4) {
+        grid-area: item-three;
+    }
+
+    .head-intro h1 {
+        font-size: 24px;
+    }
+
+    .head-intro div p,
+    .article-source {
+        font-size: 12px;
+    }
+
+    .time-title {
+        font-size: 8px;
+    }
+
+    .time-text p {
+        font-size: 10px;
+    }
+
+    .title-section {
+        font-size: 18px;
+    }
+
+    .ingredients-title {
+        font-size: 16px;
+    }
+
+    .ingredient label,
+    .instruction {
+        font-size: 14px;
+    }
+}

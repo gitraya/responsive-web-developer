@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+    font-weight: 600;
+}
+
+:root {
+    --title-oneColor: #4E5150;
+    --title-twoColor: #A9A9A9;
+    --sub-color: #BDBDBD;
+    --back-color: #E5E5E5;
+    --copy-color: #B9BDCF;
+    --gallery-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.user-name,
+.numbers {
+    color: var(--title-oneColor);
+}
+
+.user-location{
+    color: var(--title-twoColor);
+}
+
+.title {
+    color: var(--sub-color);
+}
+
+/* User profile styles */
+.user-profile {
+    width: 80%;
+    height: auto;
+    margin: 32px auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+.user-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user-picture {
+    max-width: 156px;
+    height: auto;
+    border-radius: 15px;
+    margin: 8px 0;
+}
+
+.user-name {
+    font-size: 24px;
+    margin: 4px 0;
+}
+
+.user-location {
+    font-size: 14px;
+    margin: 4px 0;
+}
+
+.user-info {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    margin: 16px;
+}
+
+.user-profile-info {
+    width: 100px;
+    height: auto;
+    background-color: var(--back-color);
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    border-radius: 12px;
+    margin: 0 12px;
+    padding: 14px 18px;
+}
+
+.numbers {
+    font-size: 18px;
+    margin: 2px 0;
+}
+
+.title {
+    font-size: 14px;
+    margin: 2px 0;
+}
+
+/* Gallery styles */
+.user-gallery {
+    width: 80%;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+        "image-a image-b image-b"
+        "image-c image-c image-d"
+        "image-f image-e image-d"
+    ;
+    gap: 24px 24px;
+}
+
+.user-images {
+    width: 100%;
+    height: 100%;
+    background-color: #4E5150;
+    box-shadow: var(--gallery-shadow);
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.user-images:hover {
+    opacity: 0.7;
+}
+
+.user-images.a {
+    grid-area: image-a;
+}
+
+.user-images.b {
+    grid-area: image-b;
+}
+
+.user-images.c {
+    grid-area: image-c;
+}
+
+.user-images.d {
+    grid-area: image-d;
+}
+
+.user-images.e {
+    grid-area: image-e;
+}
+
+.user-images.f {
+    grid-area: image-f;
+}
+
+.user-images img {
+    width: 100%;
+    height: 105%;
+    border-radius: inherit;
+    object-fit: cover;
+    object-position: center;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal .img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: var(--gallery-shadow);
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+  
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
+.material-icons {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-weight: bold;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.material-icons:hover,
+.material-icons:focus {
+    color: rgb(213, 213, 213);
+}
+
+.md-36 {
+    font-size: 36px;
+}
+
+/* Footer copyright */
+.copyright {
+    height: 20px;
+    margin: 48px auto 32px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 500;
+    color: var(--copy-color);
+}
+
+.copyright a {
+    text-decoration: underline;
+    color: var(--copy-color);
+}
+
+.copyright a:hover {
+    color: var(--title-twoColor);
+}
+
+/* Mobile device */
+@media (max-width: 768px) {
+    .user-profile {
+        width: 85%;
+        margin: 16px auto;
+    }
+
+    .user-picture {
+        max-width: 100px;
+        border-radius: 12px;
+    }
+
+    .user-profile-info {
+        width: 78px;
+        margin: 0 6px;
+        padding: 6px 10px;
+        border-radius: 8px;
+    }
+
+    .user-gallery {
+        width: 85%;
+        gap: 12px 12px;
+    }
+
+    .user-name {
+        font-size: 14px;
+    }
+    
+    .user-location {
+        font-size: 10px;
+    }
+
+    .numbers,
+    .title {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 425px) {
+    .user-profile {
+        width: 90%
+    }
+
+    .user-info {
+        margin: 8px 0;
+    }
+
+    .user-gallery {
+        width: 90%;
+    }
+}
