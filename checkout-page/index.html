@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link rel="icon" href="./assets/devchallenges.png" type="image/png">
+    <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+    <header>
+        <h1>Checkout</h1>
+    </header>
+    <main>
+        <section class="items-groceries">
+            <div class="item">
+                <div class="item-picture">
+                    <img src="./assets/photo1.png" alt="">
+                </div>
+                <div class="item-detail">
+                    <h4 class="item-name">Vintage Backbag</h4>
+                    <div class="item-price">
+                        <span class="price">$<span>54.99</span></span>
+                        <small class="price-discount">$94.99</small>
+                    </div>
+                    <div class="item-amount">
+                        <div>
+                            <span class="material-icons remove-icon">remove</span>
+                        </div>
+                        <span class="amount">1</span>
+                        <div>
+                            <span class="material-icons add-icon">add</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-picture">
+                    <img src="./assets/photo2.png" alt="">
+                </div>
+                <div class="item-detail">
+                    <h4 class="item-name">Levi Shoes</h4>
+                    <div class="item-price">
+                        <span class="price">$<span>74.99</span></span>
+                        <small class="price-discount">$124.99</small>
+                    </div>
+                    <div class="item-amount">
+                        <div>
+                            <span class="material-icons remove-icon">remove</span>
+                        </div>
+                        <span class="amount">1</span>
+                        <div>
+                            <span class="material-icons add-icon">add</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="price-detail">
+                <hr>
+                <div class="shipping-detail">
+                    <h3 class="shipping">Shipping</h3>
+                    <span class="price-total shipping-price">$<span>19</span></span>
+                </div>
+                <hr>
+                <div class="shipping-detail">
+                    <h3 class="shipping">Total</h3>
+                    <span class="price-total cart-total-price">$<span>148.98</span></span>
+                </div>
+            </div>
+        </section>
+        <section class="checkout-form">
+            <form action="">
+                <div class="form-container">
+                    <h3 class="form-title">Contact infomation</h3>
+                    <div class="input-container">
+                        <div class="form-control">
+                            <label class="label" for="email"><small>E-mail</small></label>
+                            <div class="input-field">
+                                <i class="material-icons">email</i>
+                                <input class="input" type="text" id="email" placeholder="Enter your email...">
+                            </div>
+                            <small class="message">Error message</small>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <div class="form-control">
+                            <label class="label" for="phone"><small>Phone</small></label>
+                            <div class="input-field">
+                                <i class="material-icons">phone</i>
+                                <input class="input" type="text" id="phone" placeholder="Enter your phone...">
+                            </div>
+                            <small class="message">Error message</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-container">
+                    <h3 class="form-title">Shipping address</h3>
+                    <div class="input-container">
+                        <div class="form-control">
+                            <label class="label" for="name"><small>Full name</small></label>
+                            <div class="input-field">
+                                <i class="material-icons">account_circle</i>
+                                <input class="input" type="text" id="name" placeholder="Your full name..">
+                            </div>
+                            <small class="message">Error message</small>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <div class="form-control">
+                            <label class="label" for="address"><small>Address</small></label>
+                            <div class="input-field">
+                                <i class="material-icons">home</i>
+                                <input class="input" type="text" id="address" placeholder="Your address..">
+                            </div>
+                            <small class="message">Error message</small>
+                        </div>
+                    </div>
+                    <div class="input-container">
+                        <div class="form-control">
+                            <label class="label" for="city"><small>City</small></label>
+                            <div class="input-field">
+                                <i class="material-icons">location_city</i>
+                                <input class="input" type="text" id="city" placeholder="Your city..">
+                            </div>
+                            <small class="message">Error message</small>
+                        </div>
+                    </div>
+                    <div class="input-container row">
+                        <div class="input-sub-container">
+                            <div class="form-control">
+                                <label class="label" for="country"><small>Country</small></label>
+                                <div class="input-field">
+                                    <i class="material-icons">public</i>
+                                    <select name="country" class="select-form" id="country">
+                                        <option value="" disabled selected hidden>Your country..</option>
+                                        <option value="russia">Russia</option>
+                                        <option value="canada">Canada</option>
+                                        <option value="usa">USA</option>
+                                        <option value="china">China</option>
+                                        <option value="brazil">Brazil</option>
+                                        <option value="brazil">Indonesian</option>
+                                    </select>
+                                </div>
+                                <small class="message">Error message</small>
+                            </div>
+                        </div>
+                        <div class="input-sub-container">
+                            <div class="form-control">
+                                <label class="label" for="postal"><small>Postal code</small></label>
+                                <div class="input-field">
+                                    <i class="material-icons">markunread_mailbox</i>
+                                    <input class="input" type="number" id="postal" placeholder="Your postal code..">
+                                </div>
+                                <small class="message">Error message</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-container ask">
+                        <input class="input" type="checkbox" id="ask">
+                        <label class="label" for="ask"><small>Save this information for next time</small></label>
+                    </div>
+                    <div class="submit-container">
+                        <input type="submit" value="Continue">
+                    </div>
+                </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h5 class="copyright">created by <b><a href="https://github.com/gitraya" target="_blank">gitraya</a></b> - devChallenges.io</h5>
+    </footer>
+    <script src="./javascripts/scripts.js"></script>
+</body>
+</html>
