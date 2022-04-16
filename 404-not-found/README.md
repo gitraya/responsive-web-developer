@@ -29,7 +29,7 @@
 
 ## Overview
 
-![screenshot](https://github.com/gitraya/responsive-web-developer/tree/master/404-not-found/blob/master/assets/overview404page.png)
+![screenshot](https://github.com/gitraya/responsive-web-developer/blob/master/404-not-found/assets/overview404page.png)
 
 ## Built With
 
