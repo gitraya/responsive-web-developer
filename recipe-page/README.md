@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://responsive-web-developer.herokuapp.com/recipe-page">
+    <a href="https://responsive-web-developer-gitraya.onrender.com/recipe-page">
       Demo
     </a>
     <span> | </span>

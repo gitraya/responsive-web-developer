@@ -6,7 +6,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://responsive-web-developer.herokuapp.com/edie-homepage">
+    <a href="https://responsive-web-developer-gitraya.onrender.com/edie-homepage">
       Demo
     </a>
     <span> | </span>
